@@ -137,6 +137,7 @@
 // OK
   function API_callback(method, result, data) {
     if (method === "showAd") {
+      console.log("callback_showAd");
       //unityInstance.SendMessage('AdsManager', 'CloseLoading');
       if (data === "ad_shown") {
         unityInstance.SendMessage('AdsManager', 'AdShowed');
@@ -188,6 +189,7 @@
     function ShowOKInterstational() {
       if (adCounter > 3)
       {
+        console.log("showAd");
         //unityInstance.SendMessage('AdsManager', 'OpenLoading');
         FAPI.UI.showAd();
       } else {
