@@ -121,6 +121,7 @@
     function PlatformInitialization() {
       try {
         var rParams = FAPI.Util.getRequestParameters();
+        console.log(rParams);
         if (rParams.api_server !== "undefined" && rParams.api_server == "https://api.ok.ru/") {
           unityInstance.SendMessage('VKMechanicsController', 'OKInitialization');
           OKAdsInitialization();
