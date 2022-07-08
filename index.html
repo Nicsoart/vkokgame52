@@ -132,6 +132,7 @@
           VKAdsInitialization();
         }
       } catch (e) {
+        console.log(e);
         unityInstance.SendMessage('VKMechanicsController', 'VKInitialization');
         VKAdsInitialization();
       }
@@ -206,10 +207,12 @@
     }
 
     function OKInvite(text, link) {
+      console.log("OKInvite");
       FAPI.UI.showInvite(text + "\n" + link);
     }
 
     function OKPublish(text, link) {
+      console.log("OKPublish");
       var attachment = {"media" : [
         {"type": "text", "text": text},
         {"type": "link", "url": link}
@@ -218,6 +221,7 @@
     }
 
     function OKJoinGroup(id) {
+      console.log("OKJoinGroup");
       FAPI.invokeUIMethod("joinGroup", id);
     }
 
