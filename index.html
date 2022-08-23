@@ -348,65 +348,65 @@
       })
     }
 
-// Full Screen
-    function ShowFullScreen() {
-      document.getElementById('yandex_rtb_' + fullscreenID).style.display = 'block';
-      Ya.Context.AdvManager.render({
-        renderTo: 'yandex_rtb_' + fullscreenID,
-        blockId: fullscreenID,
-        onError: (data) => {
-          unityInstance.SendMessage('AdsManager', 'CloseFullScreen');
-        },
-        onRender: (data) => {
-          unityInstance.SendMessage('AdsManager', 'FullScreenLoaded');
+    // Full Screen
+        function ShowFullScreen() {
+          //document.getElementById('yandex_rtb_' + fullscreenID).style.display = 'block';
+          //Ya.Context.AdvManager.render({
+            //renderTo: 'yandex_rtb_' + fullscreenID,
+            //blockId: fullscreenID,
+            //onError: (data) => {
+              unityInstance.SendMessage('AdsManager', 'CloseFullScreen');
+            //},
+            //onRender: (data) => {
+              //unityInstance.SendMessage('AdsManager', 'FullScreenLoaded');
+            //}
+          //})
         }
-      })
-    }
 
-    function ShowMobileFullScreen() {
-      document.getElementById('yandex_rtb_' + mobilefullscreenID).style.display = 'block';
-      Ya.Context.AdvManager.render({
-        renderTo: 'yandex_rtb_' + mobilefullscreenID,
-        blockId: mobilefullscreenID,
-        onError: (data) => {
-          unityInstance.SendMessage('AdsManager', 'CloseFullScreen');
-        },
-        onRender: (data) => {
-          unityInstance.SendMessage('AdsManager', 'FullScreenLoaded');
+        function ShowMobileFullScreen() {
+          //document.getElementById('yandex_rtb_' + mobilefullscreenID).style.display = 'block';
+          //Ya.Context.AdvManager.render({
+            //renderTo: 'yandex_rtb_' + mobilefullscreenID,
+            //blockId: mobilefullscreenID,
+            //onError: (data) => {
+              unityInstance.SendMessage('AdsManager', 'CloseFullScreen');
+            //},
+            //onRender: (data) => {
+              //unityInstance.SendMessage('AdsManager', 'FullScreenLoaded');
+            //}
+          //})
         }
-      })
-    }
 
-    function CloseFullScreen() {
-      document.getElementById('yandex_rtb_' + fullscreenID).style.display = 'none';
-    }
-
-    function CloseMobileFullScreen() {
-      document.getElementById('yandex_rtb_' + mobilefullscreenID).style.display = 'none';
-    }
-
-// Banner
-    function ShowBanner() {
-      document.getElementById('yandex_rtb_' + horizontalbannerID).style.display = 'block';
-      Ya.Context.AdvManager.render({
-        renderTo: 'yandex_rtb_' + horizontalbannerID,
-        blockId: horizontalbannerID,
-        onError: (data) => {
-          unityInstance.SendMessage('AdsManager', 'CloseBanner');
+        function CloseFullScreen() {
+          document.getElementById('yandex_rtb_' + fullscreenID).style.display = 'none';
         }
-      })
-    }
 
-    function ShowMobileBanner() {
-      document.getElementById('yandex_rtb_' + mobilebannerID).style.display = 'block';
-      Ya.Context.AdvManager.render({
-        renderTo: 'yandex_rtb_' + mobilebannerID,
-        blockId: mobilebannerID,
-        onError: (data) => {
-          unityInstance.SendMessage('AdsManager', 'CloseBanner');
+        function CloseMobileFullScreen() {
+          document.getElementById('yandex_rtb_' + mobilefullscreenID).style.display = 'none';
         }
-      })
-    }
+
+    // Banner
+        function ShowBanner() {
+          //document.getElementById('yandex_rtb_' + horizontalbannerID).style.display = 'block';
+          //Ya.Context.AdvManager.render({
+            //renderTo: 'yandex_rtb_' + horizontalbannerID,
+            //blockId: horizontalbannerID,
+            //onError: (data) => {
+              unityInstance.SendMessage('AdsManager', 'CloseBanner');
+            //}
+          //})
+        }
+
+        function ShowMobileBanner() {
+          //document.getElementById('yandex_rtb_' + mobilebannerID).style.display = 'block';
+          //Ya.Context.AdvManager.render({
+            //renderTo: 'yandex_rtb_' + mobilebannerID,
+            //blockId: mobilebannerID,
+            //onError: (data) => {
+              unityInstance.SendMessage('AdsManager', 'CloseBanner');
+            //}
+          //})
+        }
 
     function CloseBanner() {
       document.getElementById('yandex_rtb_' + horizontalbannerID).style.display = 'none';
